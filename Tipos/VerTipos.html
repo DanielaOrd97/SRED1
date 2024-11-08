@@ -3,15 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ver Aulas</title>
+    <title>Ver Tipos</title>
     <link rel="stylesheet" href="../Estilos/estilos.css" />
-    <script src="../Index.js" type="module"></script>
   </head>
   <body id="fijo">
     <header>
       <label for="">Sistema de Reportes de Equipo Dañado</label>
       <span>
-        <a href="AgregarAula.html">
+        <a href="../Tipos/AgregarTipo.html">
           <img class="extra" src="../assets/add-line.svg" alt="" />
           <img class="icono-grande" src="../assets/add-line (1).svg" alt="" />
         </a>
@@ -34,67 +33,78 @@
     </header>
     <main id="main-aulas">
       <ul id="lista-Aulas">
-        <li class="swipe-item">
+        <li class="swipe-item tipo-estilo">
           <div class="reveal-left">
-            <a href="ActualizarAula.html">
+            <a href="../Tipos/ActualizarTipo.html">
               <img src="../assets/pencil-solid.svg" alt="" />
             </a>
           </div>
-          <label for="">Laboratorio CCA3</label>
+          <span class="span-tipo">
+            <picture>
+              <source type="image/webp" srcset="../assets/juego-de-azar.webp" />
+              <img src="../assets/juego-de-azar.png" alt="" />
+            </picture>
+            <label for="">Computadora</label>
+          </span>
           <div class="reveal-right">
-            <a href="EliminarAula.html">
+            <a href="../Tipos/EliminarTipo.html">
               <img src="../assets/trash-solid.svg" alt="" />
             </a>
           </div>
         </li>
-        <li class="swipe-item">
+        <li class="swipe-item tipo-estilo">
           <div class="reveal-left">
-            <a href="ActualizarAula.html">
+            <a href="../Tipos/ActualizarTipo.html">
               <img src="../assets/pencil-solid.svg" alt="" />
             </a>
           </div>
-          <label for="">Laboratorio CCA3</label>
+          <span class="span-tipo">
+            <picture>
+              <source type="image/webp" srcset="../assets/television.webp" />
+              <img src="../assets/television.png" alt="" />
+            </picture>
+            <label for="">Pantalla</label>
+          </span>
           <div class="reveal-right">
-            <a href="EliminarAula.html">
+            <a href="../Tipos/EliminarTipo.html">
               <img src="../assets/trash-solid.svg" alt="" />
             </a>
           </div>
         </li>
-        <li class="swipe-item">
+        <li class="swipe-item tipo-estilo">
           <div class="reveal-left">
-            <a href="ActualizarAula.html">
+            <a href="../Tipos/ActualizarTipo.html">
               <img src="../assets/pencil-solid.svg" alt="" />
             </a>
           </div>
-          <label for="">Laboratorio CCA3</label>
+          <span class="span-tipo">
+            <picture>
+              <source type="image/webp" srcset="../assets/proyector.webp" />
+              <img src="../assets/proyector.png" alt="" />
+            </picture>
+            <label for="">Proyector</label>
+          </span>
           <div class="reveal-right">
-            <a href="EliminarAula.html">
+            <a href="../Tipos/EliminarTipo.html">
               <img src="../assets/trash-solid.svg" alt="" />
             </a>
           </div>
         </li>
-        <li class="swipe-item">
+        <li class="swipe-item tipo-estilo">
           <div class="reveal-left">
-            <a href="ActualizarAula.html">
+            <a href="../Tipos/ActualizarTipo.html">
               <img src="../assets/pencil-solid.svg" alt="" />
             </a>
           </div>
-          <label for="">Laboratorio CCA3</label>
+          <span class="span-tipo">
+            <picture>
+              <source type="image/webp" srcset="../assets/impresora.webp" />
+              <img src="../assets/impresora.png.png" alt="" />
+            </picture>
+            <label for="">Impresora</label>
+          </span>
           <div class="reveal-right">
-            <a href="EliminarAula.html">
-              <img src="../assets/trash-solid.svg" alt="" />
-            </a>
-          </div>
-        </li>
-        <li class="swipe-item">
-          <div class="reveal-left">
-            <a href="ActualizarAula.html">
-              <img src="../assets/pencil-solid.svg" alt="" />
-            </a>
-          </div>
-          <label for="">Laboratorio CCA3</label>
-          <div class="reveal-right">
-            <a href="EliminarAula.html">
+            <a href="../Tipos/EliminarTipo.html">
               <img src="../assets/trash-solid.svg" alt="" />
             </a>
           </div>
@@ -103,11 +113,11 @@
 
       <div id="menu-flotante">
         <ul>
-          <li class="seleccionado">
+          <li>
             <a href="../Aulas/VerAulas.html" class="prueba">
-              <img src="../assets/person-chalkboard-solid (1).svg" alt="" />
+              <img src="../assets/person-chalkboard-solid.svg" alt="" />
             </a>
-            <label for="" class="selec">Aulas</label>
+            <label for="">Aulas</label>
           </li>
           <li>
             <a href="../Equipos/VerEquipos.html">
@@ -115,11 +125,11 @@
             </a>
             <label for="">Equipos</label>
           </li>
-          <li>
+          <li class="seleccionado">
             <a href="../Tipos/VerTipos.html">
-              <img src="../assets/cubes-solid.svg" alt="" />
+              <img src="../assets/cubes-solid1.svg" alt="" />
             </a>
-            <label for="">Tipos</label>
+            <label for="" class="selec">Tipos</label>
           </li>
         </ul>
       </div>

@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ver Aulas</title>
+    <title>Ver Equipos</title>
     <link rel="stylesheet" href="../Estilos/estilos.css" />
-    <script src="../Index.js" type="module"></script>
+    <script src="/Index.js" type="module"></script>
   </head>
   <body id="fijo">
     <header>
       <label for="">Sistema de Reportes de Equipo Dañado</label>
       <span>
-        <a href="AgregarAula.html">
+        <a href="../Equipos/AgregarEquipo.html">
           <img class="extra" src="../assets/add-line.svg" alt="" />
           <img class="icono-grande" src="../assets/add-line (1).svg" alt="" />
         </a>
@@ -36,11 +36,30 @@
       <ul id="lista-Aulas">
         <li class="swipe-item">
           <div class="reveal-left">
+            <a href="../Equipos/ActualizarEquipo.html">
+              <img src="../assets/pencil-solid.svg" alt="" />
+            </a>
+          </div>
+          <span>
+            <label for="" class="letra-bold">Computadora 5</label>
+            <label for="">Laboratorio CCA3</label>
+          </span>
+          <div class="reveal-right">
+            <a href="../Aulas/EliminarAula.html">
+              <img src="../assets/trash-solid.svg" alt="" />
+            </a>
+          </div>
+        </li>
+        <li class="swipe-item">
+          <div class="reveal-left">
             <a href="ActualizarAula.html">
               <img src="../assets/pencil-solid.svg" alt="" />
             </a>
           </div>
-          <label for="">Laboratorio CCA3</label>
+          <span>
+            <label for="" class="letra-bold">Computadora 5</label>
+            <label for="">Laboratorio CCA3</label>
+          </span>
           <div class="reveal-right">
             <a href="EliminarAula.html">
               <img src="../assets/trash-solid.svg" alt="" />
@@ -53,7 +72,10 @@
               <img src="../assets/pencil-solid.svg" alt="" />
             </a>
           </div>
-          <label for="">Laboratorio CCA3</label>
+          <span>
+            <label for="" class="letra-bold">Computadora 5</label>
+            <label for="">Laboratorio CCA3</label>
+          </span>
           <div class="reveal-right">
             <a href="EliminarAula.html">
               <img src="../assets/trash-solid.svg" alt="" />
@@ -66,7 +88,10 @@
               <img src="../assets/pencil-solid.svg" alt="" />
             </a>
           </div>
-          <label for="">Laboratorio CCA3</label>
+          <span>
+            <label for="" class="letra-bold">Computadora 5</label>
+            <label for="">Laboratorio CCA3</label>
+          </span>
           <div class="reveal-right">
             <a href="EliminarAula.html">
               <img src="../assets/trash-solid.svg" alt="" />
@@ -79,20 +104,10 @@
               <img src="../assets/pencil-solid.svg" alt="" />
             </a>
           </div>
-          <label for="">Laboratorio CCA3</label>
-          <div class="reveal-right">
-            <a href="EliminarAula.html">
-              <img src="../assets/trash-solid.svg" alt="" />
-            </a>
-          </div>
-        </li>
-        <li class="swipe-item">
-          <div class="reveal-left">
-            <a href="ActualizarAula.html">
-              <img src="../assets/pencil-solid.svg" alt="" />
-            </a>
-          </div>
-          <label for="">Laboratorio CCA3</label>
+          <span>
+            <label for="" class="letra-bold">Computadora 5</label>
+            <label for="">Laboratorio CCA3</label>
+          </span>
           <div class="reveal-right">
             <a href="EliminarAula.html">
               <img src="../assets/trash-solid.svg" alt="" />
@@ -100,20 +115,19 @@
           </div>
         </li>
       </ul>
-
       <div id="menu-flotante">
         <ul>
-          <li class="seleccionado">
-            <a href="../Aulas/VerAulas.html" class="prueba">
-              <img src="../assets/person-chalkboard-solid (1).svg" alt="" />
-            </a>
-            <label for="" class="selec">Aulas</label>
-          </li>
           <li>
-            <a href="../Equipos/VerEquipos.html">
-              <img src="../assets/computer-solid.svg" alt="" />
+            <a href="../Aulas/VerAulas.html" class="prueba">
+              <img src="../assets/person-chalkboard-solid.svg" alt="" />
             </a>
-            <label for="">Equipos</label>
+            <label for="">Aulas</label>
+          </li>
+          <li class="seleccionado">
+            <a href="../Equipos/VerEquipos.html">
+              <img src="../assets/computer-solid1.svg" alt="" />
+            </a>
+            <label for="" class="selec">Equipos</label>
           </li>
           <li>
             <a href="../Tipos/VerTipos.html">

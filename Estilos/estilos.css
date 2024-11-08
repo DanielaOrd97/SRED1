@@ -458,13 +458,13 @@ header span {
   justify-content: center;
 }
 
-.span-tipo picture {
-  width: 20%;
+.span-tipo img {
+  width: 55% !important;
+  height: auto;
 }
 
-.span-tipo img {
-  width: 70%;
-  height: auto;
+.tipo-estilo {
+  padding: 1.5% !important;
 }
 
 /* VISTA AGREGAR TIPO (ICONO) **********************/
@@ -488,13 +488,21 @@ header span {
   display: flex;
   padding: 1%;
   justify-content: space-around;
+  align-items: center;
 }
 
-.div-upload label i {
+.div-upload label img {
   background-color: #d9dfe8;
   font-size: 1.5em;
   padding: 7%;
   border-radius: 5px;
+  width: 35%;
+  height: 35%;
+}
+
+.uno img {
+  width: 40% !important;
+  height: 40% !important;
 }
 
 .div-upload input[type="file"] {

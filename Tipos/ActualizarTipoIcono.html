@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agregar Tipo Icono</title>
+    <link rel="stylesheet" href="../Estilos/estilos.css" />
+  </head>
+  <body id="add-icono">
+    <header>
+      <a href="../Tipos/VerTipos.html">
+        <img src="../assets/arrow-left-solid.svg" alt="" id="btn-regresar" />
+      </a>
+      <a href="#" for="" id="btn-accion" class="sig-btn">Actualizar</a>
+    </header>
+    <main id="main-agregaraula">
+      <label id="ico" for="">Icono del tipo</label>
+      <div class="div-upload">
+        <input type="file" id="file-input" multiple="false" />
+        <span>
+          <label id="btn-subir" for="file-input" class="uno">
+            <img src="../assets/add-line (1).svg" alt="" />
+          </label>
+          <label id="btn-eliminar" class="dos">
+            <img src="../assets/trash-solid1.svg" alt="" />
+          </label>
+        </span>
+        <figure class="contenedor-img">
+          <img src="" alt="" id="img-elegida" />
+          <figcaption id="nombre-img"></figcaption>
+        </figure>
+      </div>
+    </main>
+  </body>
+</html>
+
+<script>
+  let fileInput = document.getElementById("file-input");
+  let imgElegida = document.getElementById("img-elegida");
+  let datosImg = document.getElementById("nombre-img");
+  let btnEliminar = document.getElementById("btn-eliminar");
+
+  fileInput.onchange = () => {
+    let reader = new FileReader();
+    const file = fileInput.files[0];
+
+    if (file.size <= 1024 * 1024) {
+      reader.readAsDataURL(file);
+
+      reader.onload = () => {
+        imgElegida.setAttribute("src", reader.result);
+        datosImg.textContent = `${file.name} ${(file.size / 1024).toFixed(
+          2
+        )} KB`;
+      };
+    } else {
+      imgElegida.removeAttribute("src");
+      datosImg.textContent = `Excedió el tamaño límite`;
+    }
+  };
+
+  btnEliminar.addEventListener("click", function () {
+    imgElegida.removeAttribute("src");
+    datosImg.textContent = "";
+  });
+</script>
