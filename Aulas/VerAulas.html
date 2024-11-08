@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ver Aulas</title>
+    <link rel="stylesheet" href="../Estilos/estilos.css" />
+    <script src="../Index.js" type="module"></script>
+  </head>
+  <body id="fijo">
+    <header>
+      <label for="">Sistema de Reportes de Equipo Dañado</label>
+      <span>
+        <a href="AgregarAula.html">
+          <img class="extra" src="../assets/add-line.svg" alt="" />
+          <img class="icono-grande" src="../assets/add-line (1).svg" alt="" />
+        </a>
+        <span>
+          <img
+            src="../assets/settings-3-fill (1).svg"
+            alt=""
+            class="config-chico"
+          />
+          <img
+            class="config-grande"
+            src="../assets/settings-3-line.svg"
+            alt=""
+          />
+        </span>
+      </span>
+      <div id="opcionCerrarSesion">
+        <label for="">Cerrar sesión</label>
+      </div>
+    </header>
+    <main id="main-aulas">
+      <ul id="lista-Aulas">
+        <li class="swipe-item">
+          <div class="reveal-left">
+            <a href="ActualizarAula.html">
+              <img src="../assets/pencil-solid.svg" alt="" />
+            </a>
+          </div>
+          <label for="">Laboratorio CCA3</label>
+          <div class="reveal-right">
+            <a href="EliminarAula.html">
+              <img src="../assets/trash-solid.svg" alt="" />
+            </a>
+          </div>
+        </li>
+        <li class="swipe-item">
+          <div class="reveal-left">
+            <a href="ActualizarAula.html">
+              <img src="../assets/pencil-solid.svg" alt="" />
+            </a>
+          </div>
+          <label for="">Laboratorio CCA3</label>
+          <div class="reveal-right">
+            <a href="EliminarAula.html">
+              <img src="../assets/trash-solid.svg" alt="" />
+            </a>
+          </div>
+        </li>
+        <li class="swipe-item">
+          <div class="reveal-left">
+            <a href="ActualizarAula.html">
+              <img src="../assets/pencil-solid.svg" alt="" />
+            </a>
+          </div>
+          <label for="">Laboratorio CCA3</label>
+          <div class="reveal-right">
+            <a href="EliminarAula.html">
+              <img src="../assets/trash-solid.svg" alt="" />
+            </a>
+          </div>
+        </li>
+        <li class="swipe-item">
+          <div class="reveal-left">
+            <a href="ActualizarAula.html">
+              <img src="../assets/pencil-solid.svg" alt="" />
+            </a>
+          </div>
+          <label for="">Laboratorio CCA3</label>
+          <div class="reveal-right">
+            <a href="EliminarAula.html">
+              <img src="../assets/trash-solid.svg" alt="" />
+            </a>
+          </div>
+        </li>
+        <li class="swipe-item">
+          <div class="reveal-left">
+            <a href="ActualizarAula.html">
+              <img src="../assets/pencil-solid.svg" alt="" />
+            </a>
+          </div>
+          <label for="">Laboratorio CCA3</label>
+          <div class="reveal-right">
+            <a href="EliminarAula.html">
+              <img src="../assets/trash-solid.svg" alt="" />
+            </a>
+          </div>
+        </li>
+      </ul>
+
+      <div id="menu-flotante">
+        <ul>
+          <li class="seleccionado">
+            <a href="" class="prueba">
+              <img src="../assets/person-chalkboard-solid (1).svg" alt="" />
+            </a>
+            <label for="" class="selec">Aulas</label>
+          </li>
+          <li>
+            <a href="">
+              <img src="../assets/computer-solid.svg" alt="" />
+            </a>
+            <label for="">Equipos</label>
+          </li>
+          <li>
+            <a href="">
+              <img src="../assets/cubes-solid.svg" alt="" />
+            </a>
+            <label for="">Tipos</label>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
+
+<script>
+  //MOSTRAR OPCIONES DE ACTUALIZAR Y ELIMINAR PARA ELEMENTOS DE LISTAS ADMIN.
+  function mostrarOpciones() {
+    let elemento = document.querySelectorAll(".swipe-item");
+
+    elemento.forEach((e) => {
+      e.addEventListener("click", function () {
+        const iconoEditar = e.querySelector(".reveal-left");
+        const iconoEliminar = e.querySelector(".reveal-right");
+
+        if (iconoEditar && iconoEliminar) {
+          //transicion solo una vez. Sin reiniciar cada click.
+          if (
+            !iconoEditar.style.transition &&
+            !iconoEliminar.style.transition
+          ) {
+            iconoEditar.style.transition = "opacity 0.1s ease-in";
+            iconoEliminar.style.transition = "opacity 0.1s ease-in";
+          }
+          iconoEditar.style.opacity =
+            iconoEditar.style.opacity === "1" ? "0" : "1";
+          iconoEliminar.style.opacity =
+            iconoEliminar.style.opacity === "1" ? "0" : "1";
+        }
+      });
+    });
+  }
+
+  let btnCerrarSesionChico = document.querySelector(".config-chico");
+  let btnCerrarSesionGrande = document.querySelector(".config-grande");
+
+  let opcionCerrarSesion = document.getElementById("opcionCerrarSesion");
+
+  //MOSTRAR OPCION CERRAR SESION.
+
+  function mostrarCerrarSesion(btnCerrarSesion) {
+    if (btnCerrarSesion) {
+      btnCerrarSesion.addEventListener("click", function (e) {
+        e.stopPropagation();
+
+        if (opcionCerrarSesion.style.visibility === "hidden") {
+          opcionCerrarSesion.style.visibility = "visible";
+        } else {
+          opcionCerrarSesion.style.visibility = "hidden";
+        }
+      });
+    }
+  }
+
+  function ActualizarBtnCerrarSesion() {
+    let btnCerrarSesion = document.getElementById("btn-config");
+    mostrarCerrarSesion(btnCerrarSesion);
+  }
+
+  document.addEventListener("click", function (e) {
+    if (opcionCerrarSesion.style.visibility == "visible") {
+      opcionCerrarSesion.style.visibility = "hidden";
+    }
+
+    if (e.target == btnCerrarSesionChico) {
+      btnCerrarSesionGrande.id = "";
+      btnCerrarSesionChico.id = "btn-config";
+      ActualizarBtnCerrarSesion();
+    } else if (e.target == btnCerrarSesionGrande) {
+      btnCerrarSesionGrande.id = "btn-config";
+      btnCerrarSesionChico.id = "";
+      ActualizarBtnCerrarSesion();
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    mostrarOpciones();
+    ActualizarBtnCerrarSesion();
+  });
+</script>
