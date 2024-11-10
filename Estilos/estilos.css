@@ -70,14 +70,10 @@ header label {
   margin-left: 2%;
 }
 
-header i {
-  color: #ffffff;
-  margin-right: 10px;
-  font-weight: bold;
-}
-
 header img {
   width: 20px;
+  height: 20px;
+  /* max-width: 20px; */
   height: 20px;
   align-self: center;
   vertical-align: middle;
@@ -268,7 +264,7 @@ header span {
 } */
 
 #btn-regresar {
-  margin-left: 60%;
+  margin-left: 90%;
 }
 
 #btn-accion {
@@ -459,12 +455,12 @@ header span {
 }
 
 .span-tipo img {
-  width: 55% !important;
+  width: 7% !important;
   height: auto;
 }
 
 .tipo-estilo {
-  padding: 1.5% !important;
+  padding: 3% !important;
 }
 
 /* VISTA AGREGAR TIPO (ICONO) **********************/
@@ -480,6 +476,7 @@ header span {
   display: flex;
   flex-direction: column;
   margin-top: 5%;
+  justify-content: center;
 }
 
 .div-upload span {
@@ -488,21 +485,25 @@ header span {
   display: flex;
   padding: 1%;
   justify-content: space-around;
-  align-items: center;
 }
 
 .div-upload label img {
-  background-color: #d9dfe8;
+  background-color: #335183;
   font-size: 1.5em;
   padding: 7%;
   border-radius: 5px;
-  width: 35%;
-  height: 35%;
+  width: 90%;
+  height: 90%;
 }
 
-.uno img {
-  width: 40% !important;
-  height: 40% !important;
+.uno {
+  width: 65%;
+  height: 65%;
+}
+
+.dos {
+  width: 65%;
+  height: 65%;
 }
 
 .div-upload input[type="file"] {
@@ -542,15 +543,21 @@ header span {
 
 /* MEDIA QUERIES **********************************************/
 
+/* VISTA ELIMINAR AULA */
+@media (width > 1000px) {
+  #main-eliminarraula {
+    margin-top: 4%;
+  }
+
+  #main-eliminarraula img {
+    margin-top: 0%;
+  }
+}
+
 @media (width >= 440px) {
   /* VISTA AGREGAR AULA */
   #main-agregaraula {
     margin-top: 10%;
-  }
-
-  #btn-regresar,
-  #btn-sig {
-    font-size: 1.5em;
   }
 
   #btn-regresar:hover {
@@ -578,60 +585,159 @@ header span {
   }
 }
 
-/* VISTA ELIMINAR AULA */
-@media (width > 1000px) {
-  #main-eliminarraula {
-    margin-top: 4%;
+/* TABLETAS *************************************************************************/
+@media (min-width: 765px) and (max-width: 1024px) {
+  /* VISTA VER AULAS ******************************************/
+  header img {
+    width: 40px !important;
+    height: 40px !important;
   }
 
-  #main-eliminarraula img {
-    margin-top: 0%;
+  header label {
+    font-size: 1em;
   }
+
+  #lista-Aulas li {
+    padding: 3%;
+  }
+
+  #lista-Aulas li img {
+    height: 23px;
+    width: 23px;
+  }
+
+  .seleccionado {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  #menu-flotante li {
+    width: 18% !important;
+  }
+
+  #menu-flotante li img {
+    margin-top: 5%;
+  }
+
+  #menu-flotante li label {
+    margin-top: 5%;
+  }
+
+  #opcionCerrarSesion {
+    width: 18%;
+    padding: 1%;
+  }
+
+  /* VISTA AGREGAR EQUIPO (TIPO) **************************/
+  #main-agregarEquipo {
+    padding-top: 7%;
+  }
+
+  #grid {
+    margin-top: 10%;
+    align-items: center;
+    justify-items: center;
+  }
+
+  #grid span {
+    width: 70%;
+    height: 70%;
+  }
+
+  #grid img {
+    width: 45% !important;
+  }
+
+  /* VISTA AGREGAR EQUIPO (LAB) ****************************/
+  #eq-aula {
+    padding-top: 10%;
+  }
+
+  #grid1 span {
+    width: 70%;
+    height: 70%;
+  }
+
+  #grid1 img {
+    width: 45% !important;
+  }
+
+  /* VISTA VER TIPOS ****************************************/
+  .span-tipo img {
+    width: 40px !important;
+    height: 40px !important;
+    margin: 0;
+  }
+
+  /* VISTA AGREGAR TIPO ICONO ******************************/
 }
 
-/* VISTA ESCRITORIO */
 @media (min-width: 1024px) {
-  /* VISTA VER AULAS */
-  #lista-Aulas {
-    width: 80%;
-    margin: auto;
-  }
-
-  #lista-Aulas div {
-    width: 2%;
-    height: 2%;
-  }
-
+  /* VISTA VER AULAS ***************************************/
   #fijo header {
     background-color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
   }
 
   #fijo header label {
-    color: #002664;
-    font-size: 1.1em;
-    margin-right: 25%;
-    font-weight: 600;
     margin-left: 15%;
-    align-self: center;
-  }
-
-  #fijo header a i {
+    font-size: 1.1em;
     color: #002664;
-  }
-
-  #fijo header i {
-    color: #002664;
-    font-size: 1.5em;
-    margin-left: 50%;
+    font-weight: bold;
   }
 
   #fijo header span {
     justify-content: right;
-    padding: 0;
-    margin-right: 5%;
+    margin-right: 2%;
+  }
+
+  #fijo header span a {
+    width: 18%;
+    max-width: 18%;
+    height: 100%;
+    margin-right: 7%;
+  }
+
+  #fijo header span img {
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+  }
+
+  #opcionCerrarSesion {
+    width: 10%;
+    padding: 1%;
+    padding: 0.5% !important;
+    top: 10%;
+    margin-right: 3%;
+  }
+
+  #opcionCerrarSesion label {
+    color: #ffffff !important;
+    font-size: 0.7em !important;
+  }
+
+  #lista-Aulas {
+    width: 90%;
+    margin-left: 10%;
+    margin-top: 0;
+    height: calc(90vh - 100px);
+  }
+
+  #lista-Aulas li {
+    padding: 3%;
+    height: 5%;
+    margin-bottom: 2%;
+  }
+
+  #lista-Aulas li div {
+    height: 2%;
+    width: 2%;
+    padding-bottom: 2% !important;
+  }
+
+  .seleccionado {
+    max-height: 120px;
+    max-width: 120px;
   }
 
   .icono-grande,
@@ -647,67 +753,41 @@ header span {
   }
 
   #menu-flotante {
-    float: left;
     top: 50%;
-    width: 10%;
-    margin: 0;
     height: 100%;
-    left: 5%;
+    width: 10%;
+    min-width: 10% !important;
     border-radius: 0px 23px 23px 0px;
+    left: 5%;
     box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.33);
   }
 
   #menu-flotante ul {
     flex-direction: column;
+    align-self: center;
+    flex-shrink: 0 !important;
   }
 
   #menu-flotante ul li {
     width: 90%;
-    margin: auto;
-    padding: 7%;
-    height: 30%;
+    min-width: 90px;
+    height: 15%;
+    min-height: 10px;
     align-self: center;
-    padding-top: 15%;
+    flex-shrink: 0 !important;
   }
 
-  /* 
-  #menu-flotante ul li i {
-    font-size: 2em;
-  } */
-
-  #main-aulas {
-    padding-top: 0;
+  #menu-flotante img {
+    width: 90%;
+    height: 90%;
+    margin-top: 10%;
   }
 
-  #lista-Aulas {
-    margin-left: 17%;
-    width: 80%;
-    height: calc(100vh - 100px);
+  #menu-flotante li label {
+    margin-top: 8%;
   }
 
-  #lista-Aulas li {
-    padding: 2%;
-    margin-bottom: 2%;
-  }
-
-  #lista-Aulas li:hover {
-    box-shadow: 6px 6px 9px -4px rgba(0, 0, 0, 0.75);
-    transition: all 0.2s ease;
-  }
-
-  #opcionCerrarSesion {
-    top: 12%;
-    width: 13%;
-    padding: 0.7%;
-    font-size: 0.7em;
-    margin-right: 5%;
-  }
-
-  #opcionCerrarSesion label {
-    color: #ffffff !important;
-  }
-
-  /* VISTA AGREGAR EQUIPO (TIPO) */
+  /* VISTA AGREGAR TIPO DE EQUIPO ***********************/
   #main-agregarEquipo {
     padding-top: 5%;
     overflow-y: hidden;
@@ -739,7 +819,8 @@ header span {
     height: 18%;
   }
 
-  /* VISTA AGREGAR EQUIPO (AULAS) ***************/
+  /* VISTA AGREGAR LAB EQUIPO ****************************/
+
   #eq-aula {
     margin-top: 5%;
   }
@@ -766,16 +847,7 @@ header span {
     height: 98%;
   }
 
-  /* VISTA ELIMINAR EQUIPO ****************************/
-  #main-eliminarraula {
-    padding-top: 3%;
-  }
-
-  #main-eliminarraula img {
-    width: 28%;
-  }
-
-  /* VISTA VER TIPOS ADMIN ****************************/
+  /* VISTA VER TIPOS ***********************************/
   .span-tipo {
     display: flex;
     flex-direction: row !important;
@@ -787,184 +859,73 @@ header span {
   }
 
   .span-tipo img {
-    width: 80%;
+    width: 70% !important;
   }
 
-  /* VISTA AGREGAR TIPO ICONO ***************************/
-  .div-upload {
+  /* VISTA AGREGAR TIPO ICONO **************************/
+
+  #add-icono main {
+    padding-top: 3%;
+    margin: 0;
+  }
+
+  #add-icono .div-upload {
+    height: 70vh;
     margin-top: 1%;
-    height: 65vh;
   }
 
-  .div-upload span {
-    width: 30%;
-    margin-right: 10%;
+  #add-icono .div-upload span {
+    padding: 0;
+    margin: 0;
+    height: 15%;
+    align-items: center;
+    width: 20%;
+    margin-right: 7%;
   }
 
-  .div-upload span label {
-    width: 40% !important;
+  #add-icono .div-upload span label {
+    padding: 0;
+    margin: 0;
+    width: 70%;
+    height: 60%;
+    text-align: center;
   }
 
-  .div-upload span > label {
-    text-align: right;
-  }
-
-  .dos {
-    text-align: center !important;
+  #add-icono .div-upload span label img {
+    width: 50%;
+    height: 100%;
+    padding: 4%;
+    margin: 0;
   }
 
   .contenedor-img {
-    margin-top: 1%;
-    width: 70%;
-    padding: 5%;
+    margin-top: 3%;
+    width: 85%;
+    height: 70%;
+    padding: 0;
+    align-self: center;
   }
 
   .contenedor-img img {
-    width: 30%;
-  }
-
-  .contenedor-img figcaption {
-    margin-top: 3%;
-  }
-
-  #add-icono main {
-    margin-top: 3%;
-  }
-}
-
-/* VISTAS TABLETS */
-@media (min-width: 768px) and (max-width: 1024px) {
-  #fijo header {
-    background-color: #ffffff;
-  }
-
-  #fijo header span {
-    justify-content: right;
-    margin-right: 2%;
-  }
-
-  #fijo header label {
-    color: #002664;
-    margin-left: 18%;
-    font-size: 0.9em;
-    font-weight: bold;
-  }
-
-  .extra,
-  .config-chico {
-    display: none;
-  }
-
-  .icono-grande,
-  .config-grande {
-    display: inline-block;
-  }
-
-  #opcionCerrarSesion {
-    width: 20%;
-    text-align: center;
-    justify-content: center;
-  }
-
-  #opcionCerrarSesion label {
-    color: #ffffff !important;
-    padding-right: 10%;
-  }
-
-  #menu-flotante {
-    left: 5%;
-    height: 100%;
-    top: 50%;
-    width: 10%;
-    border-radius: 0 20px 20px 0;
-    text-align: center;
-    align-content: center;
-    justify-content: center;
-  }
-
-  #menu-flotante ul {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-self: center;
-    margin: 1%;
-  }
-
-  #menu-flotante ul li {
-    width: 90%;
-    padding-top: 13%;
-    height: 15%;
-  }
-
-  #lista-Aulas {
-    width: 80%;
-    margin-left: 18%;
-  }
-
-  #lista-Aulas li {
-    padding: 2.5%;
-  }
-
-  #lista-Aulas li div {
-    width: 3%;
-    height: 3%;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 835px) {
-  /* #menu-flotante {
-    width: 18%;
-    left: 7%;
-  }
-
-  #fijo header label {
-    margin-right: 0;
-  }
-
-  #lista-Aulas li {
-    margin-bottom: 4%;
-  }
-
-  #opcionCerrarSesion {
-    top: 5%;
     width: 15%;
-  }
-
-  .reveal-left {
-    margin-left: 3%;
-  }
-
-  .reveal-right {
-    margin-right: 3%;
-  } */
-
-  /* VISTA AGREGAR EQUIPO (TIPO) */
-  #main-agregarEquipo {
-    padding-top: 10%;
-  }
-
-  #grid {
     margin-top: 5%;
   }
 
-  /* VISTA AGREGAR TIPO ICONO */
-
-  #add-icono main {
-    padding-top: 5%;
-  }
-
-  /* VISTA AGREGAR EQUIPO (LAB) **********************/
-  #grid1 img {
-    width: 100%;
-  }
-
-  #grid1 span {
-    width: 95%;
+  #nombre-img {
+    margin-top: 4%;
   }
 }
 
 /* MOVILES MAS CHICOS */
 @media (max-width: 320px) {
+  #fijo header label {
+    font-size: 0.5em;
+  }
+
+  #lista-Aulas {
+    background-color: pink;
+  }
+
   #menu-flotante ul li {
     width: 17%;
     font-size: 0.7em;
@@ -1012,39 +973,3 @@ header span {
     margin: 0;
   }
 }
-
-/* DESK MAS GRANDES */
-@media (min-width: 2048px) {
-  #fijo {
-    font-size: 1.5em;
-  }
-}
-
-@media (width>=1280px) {
-  #menu-flotante li {
-    padding: 0;
-    margin: 0;
-    height: 15% !important;
-  }
-}
-
-@media (max-width: 835px) and (min-height: 1024px) {
-  #menu-flotante {
-    width: 17%;
-    left: 8%;
-  }
-
-  #menu-flotante li {
-    height: 12% !important;
-  }
-}
-
-/* RESP **********************************/ /* MOVILES DUO */
-
-/* OTROS DESK */
-/* @media ((width > 1280px) and (width <= 1730px)) {
-  #grid {
-    margin-top: 15%;
-    background-color: aqua;
-  }
-} */
