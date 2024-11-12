@@ -575,6 +575,7 @@ header span {
   width: 94%;
   color: #ffffff;
   padding: 1%;
+  font-size: 1.2em;
   overflow-y: scroll !important;
   height: calc(100vh - 100px);
 }
@@ -603,6 +604,8 @@ header span {
   display: flex;
   flex-direction: column;
   font-size: 0.8em;
+  justify-content: space-between;
+  /* width: 95%; */
 }
 
 #filtros-flotante {
@@ -628,6 +631,16 @@ header span {
   margin-left: auto;
   margin-right: 9%;
   margin-top: 3%;
+}
+
+.lbl-completado {
+  background-color: #d9dfe8;
+  margin-left: auto;
+  height: fit-content;
+  font-size: 0.7em;
+  color: #002664;
+  padding: 0.8%;
+  border-radius: 5px;
 }
 
 /* HEADERS POSICION ***********************************/
@@ -843,9 +856,9 @@ header span {
   }
 
   #lista-reportesEncargado li {
-    border-radius: 8px;
+    border-radius: 15px;
     background-color: #335183;
-    padding: 1%;
+    padding: 2%;
     display: flex;
     width: 100%;
     margin-bottom: 2%;
@@ -866,6 +879,11 @@ header span {
     display: flex;
     flex-direction: column;
     font-size: 0.8em;
+  }
+
+  .lbl-completado {
+    padding: 0.7%;
+    border-radius: 8px;
   }
 }
 
@@ -1213,7 +1231,7 @@ header span {
     display: flex;
     width: 100%;
     margin-bottom: 1%;
-    font-size: 1em;
+    font-size: 0.9em;
   }
 
   .num {
@@ -1230,6 +1248,12 @@ header span {
     display: flex;
     flex-direction: column;
     font-size: 0.8em;
+  }
+
+  .lbl-completado {
+    padding: 0.5%;
+    border-radius: 8px;
+    font-size: 0.7em;
   }
 }
 
