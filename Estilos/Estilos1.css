@@ -1,0 +1,266 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../Fonts/Poppins/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../Fonts/Poppins/Poppins-Bold.ttf");
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* HEADERS PRINCIPALES */
+header {
+  background-color: #002664;
+  padding: 1.5%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+header label {
+  align-self: center;
+  width: auto;
+  margin-left: 40%;
+  color: #ffffff;
+  font-size: 1.1em;
+}
+
+.config-chico {
+  display: none;
+}
+
+header span {
+  display: flex;
+  margin-right: 3%;
+}
+
+#main-aulas {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#lista-Aulas {
+  list-style: none;
+  overflow-y: scroll;
+  /* margin: 2% 5% 5% 13%; */
+}
+
+#lista-Aulas li {
+  background-color: #002664;
+}
+
+.opciones-elemento {
+  background-color: #d9d9d9;
+}
+
+.opciones-elemento img {
+  width: 15px;
+}
+
+#fijo {
+  overflow-y: hidden;
+}
+
+@media (min-width: 1024px) {
+  /* ICONO HEADER ***********************************/
+  .config-grande {
+    width: 35px;
+    height: 35px;
+  }
+
+  .config-chico {
+    display: none;
+  }
+
+  /* VISTA LISTA DE AULAS **************************/
+
+  #lista-Aulas {
+    width: 85%;
+    padding: 1%;
+    max-width: 85%;
+    margin: 2% 1% 1% 15%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+    height: calc(98vh - 100px);
+  }
+
+  #lista-Aulas li {
+    width: 75%;
+    height: 30%;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1em;
+    color: #ffffff;
+    align-items: center;
+    padding: 5%;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 3px 5px 2px 0px rgba(0, 0, 0, 0.3);
+  }
+
+  #lista-Aulas label {
+    margin-bottom: 15%;
+    margin-top: 15%;
+  }
+
+  .opciones-elemento {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 20px;
+  }
+
+  .opciones-elemento span {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+  }
+
+  .opciones-elemento span img {
+    width: 15px;
+    height: 18px;
+    align-self: center;
+    margin-top: 20%;
+  }
+
+  /* EFECTO HOVER EN OPCIONES ******************/
+
+  .lapiz-blanco {
+    display: none;
+  }
+
+  .span-editar:hover {
+    background-color: #002664;
+    transition: all 0.1s ease;
+  }
+
+  .span-editar:hover .lapiz-normal {
+    display: none;
+  }
+
+  .span-editar:hover .lapiz-blanco {
+    display: inline;
+  }
+
+  .trash-blanco {
+    display: none;
+  }
+
+  .span-eliminar:hover {
+    background-color: #002664;
+    transition: all 0.1s ease;
+  }
+
+  .span-eliminar:hover .trash-normal {
+    display: none;
+  }
+
+  .span-eliminar:hover .trash-blanco {
+    display: inline;
+  }
+
+  #menu-flotante {
+    border: 1px solid #b9b9bb;
+    background-color: #002664;
+    color: #ffffff;
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    width: 10%;
+    min-width: 10% !important;
+    border-radius: 0px 23px 23px 0px;
+    left: 0%;
+    box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.33);
+  }
+
+  #menu-flotante ul {
+    list-style: none;
+    height: 70%;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 50%;
+  }
+
+  #menu-flotante ul li {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .seleccionado {
+    background-color: #d9dfe8;
+    border-radius: 100%;
+    height: 25%;
+    max-height: 100px;
+    width: 85%;
+    align-self: center;
+  }
+
+  .seleccionado a {
+    margin-top: 7%;
+  }
+
+  .selec {
+    font-weight: bold;
+    color: #002664;
+  }
+
+  #menu-flotante ul img {
+    margin-top: 10%;
+    width: 28%;
+  }
+
+  /* BOTON AGREGAR FLOTANTE *****************************/
+  #boton-Agregar {
+    background-color: #3d6db8;
+    position: absolute;
+    right: 6%;
+    top: 80%;
+    width: 80px;
+    max-width: 80px;
+    height: 80px;
+    max-height: 80px;
+    text-align: center;
+    border-radius: 80px;
+    box-shadow: -2px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+  }
+
+  #boton-Agregar img {
+    height: 75px;
+    width: 80px;
+    align-self: center;
+    padding: 0%;
+    position: relative;
+  }
+}
+
+@media (min-width: 765px) and (max-width: 1024px) {
+  #main-aulas {
+    background-color: green;
+  }
+}
