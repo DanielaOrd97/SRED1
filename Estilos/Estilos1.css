@@ -189,7 +189,8 @@ header span {
     top: 0%;
     height: 100%;
     width: 10%;
-    min-width: 10% !important;
+    min-width: 20px;
+    /* min-width: 10% !important; */
     border-radius: 0px 23px 23px 0px;
     left: 0%;
     box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.33);
@@ -214,14 +215,16 @@ header span {
   .seleccionado {
     background-color: #d9dfe8;
     border-radius: 100%;
-    height: 25%;
-    max-height: 100px;
-    width: 85%;
+    height: 100px;
+    min-height: 100px;
+    /* max-width: 150px;
+    width: 85%; */
+    width: 100px;
     align-self: center;
   }
 
   .seleccionado a {
-    margin-top: 7%;
+    margin-top: 15%;
   }
 
   .selec {
@@ -256,6 +259,20 @@ header span {
     align-self: center;
     padding: 0%;
     position: relative;
+  }
+}
+
+@media (width>1600px) {
+  #lista-Aulas label {
+    margin-bottom: 8%;
+    margin-top: 10%;
+  }
+
+  .seleccionado {
+    width: 150px;
+    height: 150px;
+    max-width: 150px;
+    max-height: 150px;
   }
 }
 
