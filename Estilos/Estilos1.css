@@ -168,6 +168,10 @@ header span {
 /************************************** ESCRITORIO ************************************/
 
 @media (min-width: 1024px) {
+  #fijo header label {
+    font-size: 1em;
+  }
+
   #btn-menu {
     display: none;
   }
@@ -376,23 +380,26 @@ header span {
 }
 
 @media (min-width: 765px) and (max-width: 1024px) {
-  /* #btn-menu {
-    width: 5%;
+  #fijo header label {
+    font-size: 1em;
   }
 
-  .config-grande {
-    width: 40px;
+  #lista-Aulas li {
+    font-size: 1.1em;
   }
 
-  #main-aulas {
-    background-color: green;
+  .opciones-elemento span img {
+    width: 25px;
   }
 
-  #menu-flotante {
-    display: none;
+  #boton-Agregar {
+    width: 100px;
+    height: 100px;
   }
 
-  #lista-Aulas {
-    display: none;
-  } */
+  #boton-Agregar img {
+    width: 90px;
+    align-self: center;
+    margin-top: 4%;
+  }
 }
