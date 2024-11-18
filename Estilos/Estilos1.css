@@ -33,17 +33,26 @@ header {
   justify-content: space-between;
 }
 
-header label {
+/* header label {
   align-self: center;
   width: auto;
   margin-left: 40%;
   color: #ffffff;
   font-size: 1.1em;
+} */
+
+/* LABEL HEADER ***********************************/
+#fijo header label {
+  width: 100%;
+  margin-left: 0;
+  text-align: center;
+  font-size: 1.1em;
+  color: #ffffff;
 }
 
-.config-chico {
+/* .config-chico {
   display: none;
-}
+} */
 
 header span {
   display: flex;
@@ -80,7 +89,89 @@ header span {
   overflow-y: hidden;
 }
 
+/*********************************** MOVILES **************************************************/
+
+/* VISTA VER AULAS ******************************************/
+#fijo header label {
+  font-size: 0.7em;
+}
+
+#btn-menu {
+  width: 7%;
+}
+
+.config-grande {
+  width: 25px;
+}
+
+#menu-flotante {
+  display: none;
+}
+
+#lista-Aulas {
+  display: flex;
+  flex-direction: column;
+  margin: 4%;
+  height: calc(98vh - 100px);
+}
+
+#lista-Aulas li {
+  margin-bottom: 3%;
+  border-radius: 15px;
+  padding: 4%;
+  color: #ffffff;
+  font-size: 0.8em;
+  display: flex;
+}
+
+#lista-Aulas li label {
+  width: 70%;
+}
+
+.opciones-elemento {
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 10px;
+}
+
+.opciones-elemento img {
+  height: 100%;
+}
+
+.lapiz-blanco,
+.trash-blanco {
+  display: none;
+}
+
+#boton-Agregar {
+  background-color: #3d6db8;
+  /* width: 18%;
+  height: 9%; */
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  position: absolute;
+  text-align: center;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: -3px 6px 5px -3px rgba(0, 0, 0, 0.75);
+}
+
+#boton-Agregar img {
+  width: 65px;
+  align-self: center;
+  margin-top: 4%;
+}
+
+/************************************** ESCRITORIO ************************************/
+
 @media (min-width: 1024px) {
+  #btn-menu {
+    display: none;
+  }
+
   /* ICONO HEADER ***********************************/
   .config-grande {
     width: 35px;
@@ -122,7 +213,7 @@ header span {
 
   #lista-Aulas label {
     margin-bottom: 15%;
-    margin-top: 15%;
+    margin-top: 5%;
   }
 
   .opciones-elemento {
@@ -162,6 +253,7 @@ header span {
 
   .span-editar:hover .lapiz-blanco {
     display: inline;
+    cursor: pointer;
   }
 
   .trash-blanco {
@@ -179,9 +271,11 @@ header span {
 
   .span-eliminar:hover .trash-blanco {
     display: inline;
+    cursor: pointer;
   }
 
   #menu-flotante {
+    display: flex;
     border: 1px solid #b9b9bb;
     background-color: #002664;
     color: #ffffff;
@@ -241,8 +335,9 @@ header span {
   #boton-Agregar {
     background-color: #3d6db8;
     position: absolute;
-    right: 6%;
-    top: 80%;
+    left: 91%;
+    /* right: 6%; */
+    top: 85%;
     width: 80px;
     max-width: 80px;
     height: 80px;
@@ -274,10 +369,30 @@ header span {
     max-width: 150px;
     max-height: 150px;
   }
+
+  .opciones-elemento {
+    width: 50%;
+  }
 }
 
 @media (min-width: 765px) and (max-width: 1024px) {
+  /* #btn-menu {
+    width: 5%;
+  }
+
+  .config-grande {
+    width: 40px;
+  }
+
   #main-aulas {
     background-color: green;
   }
+
+  #menu-flotante {
+    display: none;
+  }
+
+  #lista-Aulas {
+    display: none;
+  } */
 }
