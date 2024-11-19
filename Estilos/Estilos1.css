@@ -96,7 +96,7 @@ header span {
   font-size: 0.7em;
 }
 
-#btn-menu {
+#btn-menu1 {
   width: 7%;
 }
 
@@ -107,6 +107,66 @@ header span {
 #menu-flotante {
   display: none;
 }
+
+/* MENU LATERAL MOVILES ********************/
+
+#menu-flotanteMoviles {
+  top: 0;
+  position: absolute;
+  background-color: #002664;
+  height: 100%;
+  /* width: 40%; */
+  width: 0%;
+  border: 1px solid #b9b9b9;
+  border-radius: 0px 20px 20px 0px;
+  box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.33);
+  transition: 300ms ease-in-out;
+}
+
+#menu-flotanteMoviles ul {
+  overflow: hidden;
+}
+
+#menu-flotanteMoviles.abrir {
+  width: 40%;
+}
+
+#menu-flotanteMoviles.cerrar {
+  width: 0%;
+}
+
+#menu-flotanteMoviles ul {
+  height: 40%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+  margin-top: 50%;
+}
+
+#menu-flotanteMoviles ul li {
+  width: 100%;
+  padding-left: 15%;
+  display: flex;
+}
+
+#menu-flotanteMoviles ul li label {
+  align-self: center;
+  margin-left: 7%;
+  color: #ffffff;
+}
+
+#menu-flotanteMoviles ul a {
+  text-decoration: none;
+}
+
+#menu-flotanteMoviles img {
+  width: 30px;
+  height: 30px;
+}
+
+/* *************************************** */
 
 #lista-Aulas {
   display: flex;
@@ -173,6 +233,10 @@ header span {
   }
 
   #btn-menu {
+    display: none;
+  }
+
+  #menu-flotanteMoviles {
     display: none;
   }
 
@@ -401,5 +465,15 @@ header span {
     width: 90px;
     align-self: center;
     margin-top: 4%;
+  }
+
+  /* MENU LATERAL MOVILES TABLET ***************/
+  #menu-flotanteMoviles li img {
+    width: 50px;
+    height: 50px;
+  }
+
+  #menu-flotanteMoviles li label {
+    font-size: 1.3em;
   }
 }

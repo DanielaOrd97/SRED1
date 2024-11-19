@@ -8,7 +8,7 @@
   </head>
   <body id="fijo">
     <header>
-      <img id="btn-menu" src="../assets/menu.png" alt="" />
+      <!-- <img id="btn-menu" src="../assets/menu.png" alt="" /> -->
       <label for="">Sistema de Reportes de Equipo Dañado</label>
       <span>
         <img
@@ -411,6 +411,48 @@
           </li>
         </ul>
       </div>
+      <div id="menu-flotanteMoviles">
+        <img id="btn-menu1" src="../assets/menu.png" alt="" />
+        <ul>
+          <li>
+            <a href="../Aulas/VerAulas.html" class="prueba">
+              <img src="../assets/person-chalkboard-solid.svg" alt="" />
+            </a>
+            <label for="">Aulas</label>
+          </li>
+          <li>
+            <a href="../Equipos/VerEquipos.html">
+              <a href="">
+                <img src="../assets/computer-solid.svg" alt="" />
+              </a>
+            </a>
+            <label for="">Equipos</label>
+          </li>
+          <li>
+            <a href="../Tipos/VerTipos.html">
+              <img src="../assets/cubes-solid.svg" alt="" />
+            </a>
+            <label for="">Tipos</label>
+          </li>
+        </ul>
+      </div>
     </main>
   </body>
 </html>
+
+<script>
+  let btnmenuLateral = document.getElementById("btn-menu1");
+  let menuMoviles = document.getElementById("menu-flotanteMoviles");
+  let listaLateralMovil = document.getElementById("lista-menuMovil");
+
+  btnmenuLateral.addEventListener("click", function () {
+    menuMoviles.classList.toggle("abrir");
+  });
+
+  document.addEventListener("click", function (e) {
+    e.stopPropagation();
+    if (e.target.id != "btn-menu1") {
+      menuMoviles.classList.remove("abrir");
+    }
+  });
+</script>
