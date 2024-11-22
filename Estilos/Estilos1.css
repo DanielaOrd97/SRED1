@@ -33,14 +33,6 @@ header {
   justify-content: space-between;
 }
 
-/* header label {
-  align-self: center;
-  width: auto;
-  margin-left: 40%;
-  color: #ffffff;
-  font-size: 1.1em;
-} */
-
 /* LABEL HEADER ***********************************/
 #fijo header label {
   width: 100%;
@@ -49,10 +41,6 @@ header {
   font-size: 1.1em;
   color: #ffffff;
 }
-
-/* .config-chico {
-  display: none;
-} */
 
 header span {
   display: flex;
@@ -70,7 +58,6 @@ header span {
 #lista-Aulas {
   list-style: none;
   overflow-y: scroll;
-  /* margin: 2% 5% 5% 13%; */
 }
 
 #lista-Aulas li {
@@ -115,7 +102,6 @@ header span {
   position: absolute;
   background-color: #002664;
   height: 100%;
-  /* width: 40%; */
   width: 0%;
   border: 1px solid #b9b9b9;
   border-radius: 0px 20px 20px 0px;
@@ -207,8 +193,6 @@ header span {
 
 #boton-Agregar {
   background-color: #3d6db8;
-  /* width: 18%;
-  height: 9%; */
   width: 70px;
   height: 70px;
   border-radius: 50px;
@@ -231,6 +215,28 @@ header span {
   display: flex;
   flex-direction: column;
   width: 70%;
+}
+
+/* VISTA VER TIPOS ********************************************/
+
+.span-tipo {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.span-tipo img {
+  width: 35px;
+}
+
+.span-tipo label {
+  margin-left: 5%;
+}
+
+/* * */
+.opciones-elemento {
+  align-self: center;
 }
 
 /************************************** ESCRITORIO ************************************/
@@ -261,22 +267,22 @@ header span {
   /* VISTA LISTA DE AULAS **************************/
 
   #lista-Aulas {
-    width: 85%;
+    width: 90%;
     padding: 1%;
     max-width: 85%;
-    margin: 2% 1% 1% 15%;
+    margin: 2% 1% 1% 14%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-row-gap: 15px;
+    grid-auto-rows: minmax(80px, 185px);
+    grid-row-gap: 20%;
     grid-column-gap: 15px;
     height: calc(98vh - 100px);
   }
 
   #lista-Aulas li {
-    width: 75%;
-    height: 30%;
+    width: 100%;
+    height: 100%;
     min-height: 150px;
-    max-height: 160px;
     display: flex;
     flex-direction: column;
     font-size: 1.1em;
@@ -289,9 +295,11 @@ header span {
   }
 
   #lista-Aulas label {
-    margin-bottom: 15%;
-    margin-top: 5%;
+    margin-bottom: 10%;
     text-wrap: wrap;
+    height: 50%;
+    align-content: center;
+    font-size: 1em;
   }
 
   /* VISTA VER EQUIPOS ***********************************/
@@ -299,20 +307,16 @@ header span {
   .info-equipo {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    height: 70%;
-    width: 100%;
+    height: 50%;
+    margin-bottom: 10%;
+    margin-top: 2%;
+    width: 95%;
   }
 
   .info-equipo label {
     width: 100% !important;
+    padding: 0;
     margin: 0 !important;
-  }
-
-  .nombre-lab {
-    font-size: 0.8em;
   }
 
   .bold {
@@ -324,6 +328,11 @@ header span {
     display: flex;
     justify-content: space-evenly;
     border-radius: 20px;
+    /* height: 18%; */
+    height: 30px;
+    min-height: 30px;
+    /* max-height: 30px; */
+    align-items: center;
   }
 
   .opciones-elemento span {
@@ -337,6 +346,35 @@ header span {
     height: 18px;
     align-self: center;
     margin-top: 20%;
+  }
+
+  /* VISTA VER TIPOS *******************************/
+
+  .span-tipo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .span-tipo img {
+    width: 45px;
+    max-width: 45px;
+    height: 45px;
+    max-height: 45px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .span-tipo label {
+    width: 100% !important;
+    margin-bottom: 7% !important;
+    margin-top: 3px !important;
+    margin-left: 0px !important;
+  }
+
+  .nombre-lab {
+    overflow-y: scroll;
+    scrollbar-width: none;
   }
 
   /* EFECTO HOVER EN OPCIONES ******************/
@@ -387,7 +425,6 @@ header span {
     height: 100%;
     width: 10%;
     min-width: 20px;
-    /* min-width: 10% !important; */
     border-radius: 0px 23px 23px 0px;
     left: 0%;
     box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.33);
@@ -414,14 +451,9 @@ header span {
     border-radius: 100%;
     height: 100px;
     min-height: 100px;
-    /* max-width: 150px;
-    width: 85%; */
     width: 100px;
     align-self: center;
-  }
-
-  .seleccionado a {
-    margin-top: 15%;
+    padding-top: 10%;
   }
 
   .selec {
@@ -439,7 +471,6 @@ header span {
     background-color: #3d6db8;
     position: absolute;
     left: 91%;
-    /* right: 6%; */
     top: 85%;
     width: 80px;
     max-width: 80px;
@@ -466,15 +497,39 @@ header span {
     margin-top: 10%;
   }
 
+  #lista-Aulas {
+    grid-row-gap: 5%;
+  }
+
   .seleccionado {
     width: 150px;
     height: 150px;
     max-width: 150px;
     max-height: 150px;
+    padding-top: 15%;
   }
 
   .opciones-elemento {
     width: 50%;
+    height: 60px !important;
+  }
+
+  .opciones-elemento span {
+    height: 36px;
+    width: 36px;
+    border-radius: 20px;
+  }
+
+  .opciones-elemento span img {
+    width: 23px;
+  }
+
+  #lista-Aulas label {
+    font-size: 1.3em;
+  }
+
+  .span-tipo label {
+    margin-top: 0px !important;
   }
 }
 
@@ -504,6 +559,15 @@ header span {
     width: 90px;
     align-self: center;
     margin-top: 4%;
+  }
+
+  /* VISTA VER TIPOS *************************************/
+
+  .span-tipo img {
+    width: 60px;
+  }
+  .opciones-elemento {
+    align-self: center;
   }
 
   /* MENU LATERAL MOVILES TABLET ***************/
