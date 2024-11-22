@@ -152,6 +152,10 @@ header span {
   height: 30px;
 }
 
+#menu-flotanteMoviles li a span {
+  display: flex;
+}
+
 /* *************************************** */
 
 #lista-Aulas {
@@ -172,6 +176,7 @@ header span {
 
 #lista-Aulas li label {
   width: 70%;
+  align-self: center;
 }
 
 .opciones-elemento {
@@ -215,6 +220,10 @@ header span {
   display: flex;
   flex-direction: column;
   width: 70%;
+}
+
+.info-equipo label {
+  align-self: flex-start !important;
 }
 
 /* VISTA VER TIPOS ********************************************/
