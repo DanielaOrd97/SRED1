@@ -248,6 +248,74 @@ header span {
   align-self: center;
 }
 
+/* HEADERS POSICION ***********************************/
+.body-headers {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* VISTA AGREGAR EQUIPO ***********************/
+
+#main-agregarEquipo {
+  display: flex;
+  flex-direction: column;
+}
+
+#eq-tipo {
+  font-weight: bold;
+  padding-top: 13%;
+  padding-left: 7%;
+}
+
+#grid {
+  display: grid;
+  width: 100%;
+  overflow-x: hidden;
+  justify-content: space-between;
+  padding: 4%;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 2%;
+  overflow-y: scroll;
+  height: calc(95vh - 100px);
+  scrollbar-width: none;
+}
+
+#grid span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #002664;
+  text-align: center;
+  margin: 1%;
+  padding: 2%;
+  width: 90%;
+  height: 100%;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+#grid img {
+  width: 30%;
+}
+
+#btn-regresar {
+  width: 15px;
+  margin-left: 50%;
+  align-self: center;
+}
+
+.sig-btn {
+  width: 15px;
+  margin-right: 1%;
+  align-self: center;
+}
+
+.opcion-seleccionada {
+  background-color: #335183 !important;
+}
+
 /************************************** ESCRITORIO ************************************/
 
 @media (min-width: 1024px) {
@@ -261,6 +329,14 @@ header span {
 
   #menu-flotanteMoviles {
     display: none;
+  }
+
+  #btn-regresar {
+    width: 22px;
+  }
+
+  .sig-btn {
+    width: 22px;
   }
 
   /* ICONO HEADER ***********************************/
@@ -337,10 +413,8 @@ header span {
     display: flex;
     justify-content: space-evenly;
     border-radius: 20px;
-    /* height: 18%; */
     height: 30px;
     min-height: 30px;
-    /* max-height: 30px; */
     align-items: center;
   }
 
@@ -498,6 +572,23 @@ header span {
     padding: 0%;
     position: relative;
   }
+
+  /* VISTA AGREGAR EQUIPO ***********************/
+  #eq-tipo {
+    padding-top: 8%;
+    padding-left: 5%;
+    font-weight: bold;
+  }
+
+  #grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #grid img {
+    width: 30%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+  }
 }
 
 @media (width>1600px) {
@@ -547,6 +638,14 @@ header span {
     font-size: 1em;
   }
 
+  #btn-regresar {
+    width: 22px;
+  }
+
+  .sig-btn {
+    width: 22px;
+  }
+
   #lista-Aulas li {
     font-size: 1.1em;
   }
@@ -587,5 +686,29 @@ header span {
 
   #menu-flotanteMoviles li label {
     font-size: 1.3em;
+  }
+
+  /* VISTA AGREGAR TIPO EQUIPO ***********************/
+  #eq-tipo {
+    padding-top: 10%;
+    padding-left: 7%;
+    font-weight: bold;
+  }
+
+  #grid {
+    grid-template-columns: repeat(3, 1fr);
+    width: 95%;
+    margin: auto;
+  }
+
+  #grid span {
+    width: 90%;
+    height: 80%;
+  }
+
+  #grid img {
+    width: 25%;
+    margin-top: 1%;
+    margin-bottom: 2%;
   }
 }
