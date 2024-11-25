@@ -4,18 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Actualizar Equipo</title>
-    <link rel="stylesheet" href="../Estilos/estilos.css" />
+    <link rel="stylesheet" href="../Estilos/estilos1.css" />
   </head>
   <body>
-    <header>
+    <header class="body-headers">
       <a href="../Equipos/VerEquiposCorregido.html">
         <img src="../assets/arrow-left-solid.svg" alt="" id="btn-regresar" />
       </a>
-      <a
-        href="../Equipos/ActualizarEquipo(Tipo).html"
-        id="btn-accion"
-        class="sig-btn"
-      >
+      <a href="../Equipos/ActualizarEquipo(Tipo).html" class="sig-btn">
         <img src="../assets/arrow-right-solid.svg" alt="" />
       </a>
     </header>
@@ -26,3 +22,20 @@
     </main>
   </body>
 </html>
+<script>
+  function cambiarColorAlSeleccionar() {
+    let opciones = document.querySelectorAll(".opcion");
+
+    opciones.forEach((e) => {
+      e.addEventListener("click", function () {
+        if (e.classList.contains("opcion-seleccionada")) {
+          e.classList.remove("opcion-seleccionada");
+        } else {
+          e.classList.add("opcion-seleccionada");
+        }
+      });
+    });
+  }
+
+  cambiarColorAlSeleccionar();
+</script>

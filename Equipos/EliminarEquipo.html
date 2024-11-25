@@ -3,15 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eliminar Equipo</title>
-    <link rel="stylesheet" href="../Estilos/estilos.css" />
+    <title>Agregar Equipo</title>
+    <link rel="stylesheet" href="../Estilos/estilos1.css" />
   </head>
   <body>
-    <header>
+    <header class="body-headers">
       <a href="../Equipos/VerEquiposCorregido.html">
         <img src="../assets/arrow-left-solid.svg" alt="" id="btn-regresar" />
       </a>
-      <a for="" id="btn-accion">Aceptar</a>
+      <a
+        href="../Equipos/AgregarEquipo(Tipo).html"
+        class="sig-btn"
+        id="btn-accion"
+      >
+        Aceptar
+      </a>
     </header>
     <main id="main-eliminarraula">
       <section>
@@ -19,7 +25,6 @@
           <span for="">Desea eliminar el equipo indicado?</span>
           <label for="">Computadora 6</label>
         </span>
-
         <picture>
           <source type="image/webp" srcset="../assets/hombre-pensando.webp" />
           <img src="../assets/hombre-pensando.png" alt="" />
@@ -28,3 +33,20 @@
     </main>
   </body>
 </html>
+<script>
+  function cambiarColorAlSeleccionar() {
+    let opciones = document.querySelectorAll(".opcion");
+
+    opciones.forEach((e) => {
+      e.addEventListener("click", function () {
+        if (e.classList.contains("opcion-seleccionada")) {
+          e.classList.remove("opcion-seleccionada");
+        } else {
+          e.classList.add("opcion-seleccionada");
+        }
+      });
+    });
+  }
+
+  cambiarColorAlSeleccionar();
+</script>
