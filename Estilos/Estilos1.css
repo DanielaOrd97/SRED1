@@ -436,6 +436,10 @@ header span {
   align-self: center;
   text-align: center;
 }
+
+#span2 {
+  margin-top: 5%;
+}
 /************************************** ESCRITORIO ************************************/
 
 @media (min-width: 1024px) {
@@ -744,6 +748,14 @@ header span {
 
   #main-eliminarraula img {
     margin-top: 5%;
+  }
+
+  .eliminar {
+    padding-top: 5% !important;
+  }
+
+  .eliminar img {
+    margin-top: 0% !important;
   }
 }
 
