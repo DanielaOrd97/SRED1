@@ -664,6 +664,7 @@ header span {
 
 .problema label {
   margin-left: 2%;
+  overflow-wrap: break-word;
 }
 
 .inf {
@@ -1106,31 +1107,24 @@ header span {
   #lista-reportesEncargado {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    overflow-y: scroll !important;
     margin: 2%;
     height: calc(85vh - 100px);
     grid-row-gap: 3%;
   }
 
   #lista-reportesEncargado li {
-    display: flex;
-    flex-direction: column;
-    background-color: #002664;
     width: 90%;
     justify-self: center;
     padding: 5%;
-    border-radius: 10px;
     box-shadow: -5px 1px 12px -1px rgba(0, 0, 0, 0.75);
   }
 
   .estado {
     display: flex;
-    align-items: center;
     font-size: 0.6em;
   }
 
   .circulo {
-    background-color: #9edf9c;
     width: 13px;
     height: 13px;
     border-radius: 50px;
@@ -1139,12 +1133,11 @@ header span {
 
   .lbl-estado {
     color: #9edf9c;
+    font-size: 1em;
   }
 
   .marca-completado {
-    background-color: #ffffff;
     font-size: 0.6em;
-    /* width: 50%; */
     width: 118px;
     max-width: 135px;
     margin-left: auto;
@@ -1152,7 +1145,6 @@ header span {
     text-align: center;
     padding: 2%;
     border-radius: 20px;
-    color: #002664;
     margin-top: 5px;
   }
 
@@ -1164,12 +1156,6 @@ header span {
 
   .problema {
     margin-top: 15px;
-    align-items: center;
-    color: #ffffff;
-  }
-
-  .problema label {
-    overflow-wrap: break-word;
   }
 
   .problema img {
@@ -1178,10 +1164,9 @@ header span {
   }
 
   .inf {
-    color: #ffffff;
     text-wrap: wrap;
     overflow-wrap: break-word;
-    margin-top: 15px;
+    margin-top: 5px;
     font-size: 0.8em;
   }
 
