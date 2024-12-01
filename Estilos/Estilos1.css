@@ -618,6 +618,8 @@ header span {
   margin-bottom: 3%;
   border-radius: 20px;
   box-shadow: 3px 5px 2px 0px rgba(0, 0, 0, 0.3);
+  /* overflow-y: scroll;
+  scrollbar-width: none; */
 }
 
 #lista-reportesEncargado li span {
@@ -675,6 +677,7 @@ header span {
 #lista-reportesEncargado li img {
   width: 14px;
   height: 14px;
+  align-self: flex-start;
 }
 
 /* VISTA DETALLES REPORTE ********************************/
@@ -753,6 +756,19 @@ header span {
 
 .ultimo img {
   align-self: flex-start;
+}
+
+/* VISTA INVITADO VER REPORTES ENVIADOS ************************/
+
+.titulo-repEnviados {
+  display: flex;
+  margin-top: 4%;
+  margin-left: 4%;
+  font-size: 0.9em;
+}
+
+.rep-enviados {
+  margin-top: 4%;
 }
 
 /************************************** ESCRITORIO ************************************/
@@ -1188,6 +1204,8 @@ header span {
     margin: 2%;
     height: calc(85vh - 100px);
     grid-row-gap: 3%;
+    grid-auto-rows: minmax(165px, 170px);
+    overflow-y: scroll;
   }
 
   #lista-reportesEncargado li {
@@ -1195,6 +1213,8 @@ header span {
     justify-self: center;
     padding: 5%;
     box-shadow: -5px 1px 12px -1px rgba(0, 0, 0, 0.75);
+    overflow-y: scroll;
+    scrollbar-width: none;
   }
 
   .estado {
@@ -1329,6 +1349,11 @@ header span {
   .ultimo span label {
     height: 100%;
   }
+
+  /* VISTA INVITADO VER REPORTES ENVIADOS **********************************/
+  .titulo-repEnviados {
+    margin-top: 1%;
+  }
 }
 
 @media (width>1600px) {
@@ -1384,6 +1409,11 @@ header span {
   /* VISTA ELIMINAR EQUIPO ********************************/
   #main-eliminarraula {
     font-size: 1.3em;
+  }
+
+  /* VISTA LISTA DE REPORTES *******************************/
+  #lista-reportesEncargado {
+    grid-auto-rows: minmax(180px, 190px);
   }
 
   /* VISTA VER DETALLES ***********************************/
