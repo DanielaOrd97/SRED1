@@ -677,6 +677,84 @@ header span {
   height: 14px;
 }
 
+/* VISTA DETALLES REPORTE ********************************/
+#body-detalles {
+  display: block;
+}
+
+#body-detalles main {
+  padding-top: 14%;
+}
+
+.title {
+  margin-left: 5%;
+  font-weight: bold;
+}
+
+#detalles {
+  margin: 4%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 3%;
+  grid-column-gap: 4%;
+  height: 75vh;
+  overflow-y: scroll;
+}
+
+#detalles img {
+  width: 20px;
+  height: 100%;
+  margin-left: 5%;
+}
+
+#detalles div {
+  display: flex;
+  flex-direction: column;
+  background-color: #d9dfe8;
+  min-height: 100px;
+  border-radius: 20px;
+  padding: 2%;
+  box-shadow: 1px 1px 5px -2px rgba(0, 0, 0, 0.75);
+}
+
+#detalles div > label {
+  font-weight: bold;
+  margin-left: 5%;
+  font-size: 0.8em;
+  margin-top: 3%;
+}
+
+#detalles div span {
+  align-items: center;
+  overflow-wrap: break-word;
+  margin-top: 1%;
+  display: flex;
+  height: 100%;
+}
+
+#detalles div span label {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.ultimo {
+  grid-column: 1/3;
+  height: fit-content;
+  min-height: 100px;
+}
+
+.ultimo span {
+  height: 100%;
+}
+
+.ultimo span label {
+  height: 100%;
+}
+
+.ultimo img {
+  align-self: flex-start;
+}
+
 /************************************** ESCRITORIO ************************************/
 
 @media (min-width: 1024px) {
@@ -1178,6 +1256,79 @@ header span {
   #iconofiltros-movil {
     display: none;
   }
+
+  /* VISTA VER DETALLES *****************************/
+  #body-detalles main {
+    padding-top: 7%;
+  }
+
+  #body-detalles main > label {
+    font-size: 1.1em;
+  }
+
+  #detalles {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 2%;
+    height: calc(90vh - 100px);
+    grid-auto-rows: minmax(120px, 200px);
+    scrollbar-width: none;
+  }
+
+  #detalles div {
+    height: 80%;
+    padding: 2%;
+  }
+
+  #detalles div span {
+    width: 85%;
+    margin-left: 2%;
+    padding: 0;
+    margin-top: 1%;
+    padding-top: 0%;
+    height: 65%;
+  }
+
+  #detalles div > label {
+    font-size: 1.1em;
+    margin-top: 1%;
+    margin-left: 2%;
+  }
+
+  #detalles div span label {
+    font-size: 1.1em;
+  }
+
+  #detalles div img {
+    margin-left: 0%;
+    width: 28px;
+    height: 28px;
+  }
+
+  .ultimo {
+    grid-column: 2/4;
+    width: 100% !important;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ultimo > label {
+    margin-top: 0% !important;
+    margin-left: 1% !important;
+  }
+
+  .ultimo span {
+    margin-top: 2% !important;
+    margin-left: 1% !important;
+    padding-left: 0% !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .ultimo span label {
+    height: 100%;
+  }
 }
 
 @media (width>1600px) {
@@ -1233,6 +1384,19 @@ header span {
   /* VISTA ELIMINAR EQUIPO ********************************/
   #main-eliminarraula {
     font-size: 1.3em;
+  }
+
+  /* VISTA VER DETALLES ***********************************/
+  #body-detalles main > label {
+    font-size: 1.4em;
+  }
+
+  #detalles div > label {
+    font-size: 1.3em;
+  }
+
+  #detalles div span label {
+    font-size: 1.5em;
   }
 }
 
@@ -1369,6 +1533,45 @@ header span {
     font-size: 1em;
     border-radius: 13px;
   }
+
+  /* VISTA VER DETALLES ********************************/
+  #body-detalles main {
+    padding-top: 13%;
+  }
+
+  #detalles {
+    margin-top: 5%;
+    grid-auto-rows: minmax(80px, 120px);
+    grid-template-columns: repeat(3, 1fr);
+    scrollbar-width: none;
+  }
+
+  #detalles div > label {
+    font-size: 1em;
+    margin-left: 5%;
+  }
+
+  #detalles div span label {
+    margin-left: 5%;
+    font-size: 1em;
+    overflow-wrap: break-word;
+  }
+
+  .ultimo {
+    grid-column: 1/4;
+  }
+
+  .ultimo > label {
+    margin-top: 1% !important;
+  }
+
+  .ultimo span {
+    margin-top: 1% !important;
+  }
+
+  .ultimo span label {
+    margin-left: 1% !important;
+  }
 }
 
 /* DISP MAS CHICOS *************************************/
@@ -1390,5 +1593,18 @@ header span {
     padding: 1%;
     width: 40%;
     font-size: 0.9em;
+  }
+
+  #detalles {
+    height: calc(95vh - 100px);
+    overflow-y: scroll;
+  }
+
+  #detalles div {
+    border-radius: 13px;
+  }
+
+  #detalles div span label {
+    font-size: 1em;
   }
 }
