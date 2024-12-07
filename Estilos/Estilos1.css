@@ -380,7 +380,7 @@ header span {
   margin-right: 5%;
   align-self: center;
   font-size: 0.7em;
-  color: #ffffff;
+  color: #ffffff !important;
   padding: 2px;
   text-decoration: none;
 }
@@ -439,6 +439,12 @@ header span {
 
 #span2 {
   margin-top: 5%;
+}
+
+.sig-palabra {
+  width: auto !important;
+  margin-right: 1% !important;
+  color: #ffffff !important;
 }
 
 /* VISTA AGREGAR TIPO (ICONO) ****************************************/
@@ -769,6 +775,176 @@ header span {
 
 .rep-enviados {
   margin-top: 4%;
+}
+
+/* VISTA INVITADO DESCRIPCION ************************************/
+#main-Desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.lbl-desc {
+  display: block;
+  margin-top: 15%;
+  margin-left: 3%;
+}
+
+textarea {
+  resize: none;
+  width: 75%;
+  height: 220px;
+  align-self: center;
+  margin-top: 20%;
+  padding: 2%;
+  border: 1px solid #b9b9b9;
+  border-radius: 15px;
+  box-shadow: -1px 3px 5px -2px rgba(0, 0, 0, 0.75);
+}
+
+#main-confirmacion label {
+  font-size: 1.5em;
+  text-align: center;
+  display: flex;
+  width: 70%;
+  justify-self: center;
+  margin-top: 45%;
+  font-weight: bold;
+}
+
+#main-confirmacion img {
+  width: 85px;
+  height: 85px;
+  display: flex;
+  justify-self: center;
+  margin-top: 4%;
+}
+
+#main-confirmacion button {
+  background-color: #002664;
+  color: #ffffff;
+  padding: 1.5%;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-self: center;
+  margin-top: 20%;
+  box-shadow: -1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  font-size: 1em;
+}
+
+/* VISTA LOG IN ************************************************************************/
+#body-logIn header {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+#logo {
+  height: 110px;
+  width: 110px;
+  justify-self: center;
+  margin-top: 5%;
+  border: 2px solid #002664;
+  border-radius: 55px;
+  box-shadow: -1px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#body-logIn h3 {
+  color: #002664;
+  text-align: center;
+  width: 70%;
+  margin-top: 4%;
+}
+
+#body-logIn main {
+  margin-top: 10%;
+}
+
+.lbl-log {
+  font-size: 0.6em;
+  margin-left: 7%;
+  color: #758694;
+}
+
+#form-LogIn {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#form-LogIn div {
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+#form-LogIn img {
+  position: absolute;
+  height: 3%;
+  margin-top: 2%;
+  margin-left: 4%;
+  height: 20px;
+  width: 20px;
+}
+
+.input-field {
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+  height: 35px;
+  justify-self: center;
+  align-self: center;
+  border: 1px solid #b9b9b9;
+  border-radius: 20px;
+}
+
+.input-field::placeholder {
+  color: #bbbbbb;
+  font-size: 0.8em;
+}
+
+.pass {
+  margin-top: 6%;
+}
+
+.excepcion {
+  display: flex;
+  width: 80%;
+  justify-self: center;
+  justify-content: center;
+  font-size: 0.8em;
+  color: #c7253e;
+}
+
+#body-logIn button {
+  background-color: #033e8c;
+  color: #ffffff;
+  border: none;
+  display: flex;
+  justify-self: center;
+  margin-top: 8%;
+  padding: 2%;
+  font-size: 1em;
+  width: 45%;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+#body-logIn a {
+  display: flex;
+  margin-top: 15%;
+  justify-content: center;
+  color: #1230ae;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+#body-logIn a span {
+  margin-left: 1%;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 /************************************** ESCRITORIO ************************************/
@@ -1354,6 +1530,38 @@ header span {
   .titulo-repEnviados {
     margin-top: 1%;
   }
+
+  .rep-enviados {
+    margin-top: 12%;
+  }
+
+  /* VISTA INVITADO DESCRIPCION *********************************************/
+  .lbl-desc {
+    margin-top: 8%;
+  }
+
+  textarea {
+    margin-top: 5%;
+    width: 55%;
+  }
+
+  /* VISTA INVITADO CONFIRMACION ***********************************************/
+  #main-confirmacion label {
+    margin-top: 7%;
+    width: 100%;
+    justify-content: center;
+  }
+
+  #main-confirmacion button {
+    margin-top: 5%;
+    padding: 0.7%;
+  }
+
+  #main-confirmacion button:hover {
+    background-color: #d9dfe8;
+    color: black;
+    transition: all 0.2s ease;
+  }
 }
 
 @media (width>1600px) {
@@ -1426,7 +1634,7 @@ header span {
   }
 
   #detalles div span label {
-    font-size: 1.5em;
+    font-size: 1.7em;
   }
 }
 
@@ -1602,6 +1810,28 @@ header span {
   .ultimo span label {
     margin-left: 1% !important;
   }
+
+  /* VISTA INVITADO DESCRIPCION **********************************************/
+  textarea {
+    margin-top: 10%;
+  }
+
+  /* VISTA INVITADO CONFIRMACION **********************************************/
+  #main-confirmacion label {
+    font-size: 1.8em;
+    margin-top: 30%;
+  }
+
+  #main-confirmacion img {
+    width: 110px;
+    height: 110px;
+  }
+
+  #main-confirmacion button {
+    font-size: 1.3em;
+    padding: 1.5%;
+    margin-top: 13%;
+  }
 }
 
 /* DISP MAS CHICOS *************************************/
@@ -1636,5 +1866,11 @@ header span {
 
   #detalles div span label {
     font-size: 1em;
+  }
+
+  /* VISTA INVITADO CONFIRMACION *****************************************************/
+  #main-confirmacion label {
+    margin-top: 10%;
+    font-size: 1.3em;
   }
 }
