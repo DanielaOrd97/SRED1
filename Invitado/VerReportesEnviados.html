@@ -17,6 +17,9 @@
         />
       </span>
     </header>
+    <div id="opcionCerrarSesion">
+      <label for="">Cerrar sesión</label>
+    </div>
     <main id="principal-encargado">
       <label for="" class="titulo-repEnviados">Reportes enviados:</label>
       <ul id="lista-reportesEncargado">
@@ -130,80 +133,22 @@
 </html>
 
 <script>
-  // PARA QUE NO ELIGA LAS DOS OPCIONES DEL MISMO FILTRO
-  let filtrosMovil = document.getElementById("filtros-flotante");
-  let botonSeleccionado = null;
-  let botonSeleccionado1 = null;
-  let spanxOrden = document.querySelector(".span-porOrden");
-  let spanxEstado = document.querySelector(".span-porEstado");
+  let btnCerrarSesion = document.querySelector(".config-grande");
+  let opcionCerrarSesion = document.getElementById("opcionCerrarSesion");
 
-  filtrosMovil.addEventListener("click", function (e) {
-    if (e.target.tagName == "BUTTON" && e.target.id != "btn-Aplicar") {
-      let boton = e.target;
+  btnCerrarSesion.addEventListener("click", function (e) {
+    e.stopPropagation();
 
-      let actual = window.getComputedStyle(boton).backgroundColor;
-
-      if (boton.parentElement.className == "span-porEstado") {
-        spanxOrden.lastElementChild.previousElementSibling.style.backgroundColor =
-          "#D9DFE8";
-        spanxOrden.lastElementChild.previousElementSibling.style.color =
-          "black";
-        spanxOrden.lastElementChild.style.backgroundColor = "#D9DFE8";
-        spanxOrden.lastElementChild.style.color = "black";
-
-        if (botonSeleccionado && botonSeleccionado !== boton) {
-          botonSeleccionado.style.backgroundColor = "#D9DFE8";
-          botonSeleccionado.style.color = "black";
-        }
-
-        if (actual === "rgb(217, 223, 232)") {
-          boton.style.backgroundColor = "#335183";
-          boton.style.color = "#ffffff";
-        } else {
-          boton.style.backgroundColor = "#D9DFE8";
-          boton.style.color = "black";
-        }
-
-        botonSeleccionado = boton;
-      } else if (boton.parentElement.className == "span-porOrden") {
-        spanxEstado.lastElementChild.previousElementSibling.previousElementSibling.style.backgroundColor =
-          "#D9DFE8";
-        spanxEstado.lastElementChild.previousElementSibling.previousElementSibling.style.color =
-          "black";
-        spanxEstado.lastElementChild.previousElementSibling.style.backgroundColor =
-          "#D9DFE8";
-        spanxEstado.lastElementChild.previousElementSibling.style.color =
-          "black";
-        spanxEstado.lastElementChild.style.backgroundColor = "#D9DFE8";
-        spanxEstado.lastElementChild.style.color = "black";
-
-        if (botonSeleccionado1 && botonSeleccionado1 !== boton) {
-          botonSeleccionado1.style.backgroundColor = "#D9DFE8";
-          botonSeleccionado1.style.color = "black";
-        }
-
-        if (actual === "rgb(217, 223, 232)") {
-          boton.style.backgroundColor = "#335183";
-          boton.style.color = "#ffffff";
-        } else {
-          boton.style.backgroundColor = "#D9DFE8";
-          boton.style.color = "black";
-        }
-
-        botonSeleccionado1 = boton;
-      }
+    if (opcionCerrarSesion.style.visibility === "hidden") {
+      opcionCerrarSesion.style.visibility = "visible";
+    } else {
+      opcionCerrarSesion.style.visibility = "hidden";
     }
   });
 
-  //BOTON CERRAR FILTROS MOVIL
-  let btnCerrarFiltros = document.getElementById("btn-cerrarFiltros");
-  let btnfiltrosMovil = document.getElementById("iconofiltros-movil");
-
-  btnfiltrosMovil.addEventListener("click", function () {
-    filtrosMovil.style.display = "flex";
-  });
-
-  btnCerrarFiltros.addEventListener("click", function () {
-    filtrosMovil.style.display = "none";
+  document.addEventListener("click", function (e) {
+    if (opcionCerrarSesion.style.visibility == "visible") {
+      opcionCerrarSesion.style.visibility = "hidden";
+    }
   });
 </script>

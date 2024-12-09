@@ -18,6 +18,9 @@
         />
       </span>
     </header>
+    <div id="opcionCerrarSesion">
+      <label for="">Cerrar sesión</label>
+    </div>
     <div id="filtros-flotante">
       <img src="../assets/xmark-solid.svg" alt="" id="btn-cerrarFiltros" />
       <span>
@@ -259,6 +262,25 @@
 
   btnfiltrosMovil.addEventListener("click", function () {
     filtrosMovil.style.display = "flex";
+  });
+
+  let btnCerrarSesion = document.querySelector(".config-grande");
+  let opcionCerrarSesion = document.getElementById("opcionCerrarSesion");
+
+  btnCerrarSesion.addEventListener("click", function (e) {
+    e.stopPropagation();
+
+    if (opcionCerrarSesion.style.visibility === "hidden") {
+      opcionCerrarSesion.style.visibility = "visible";
+    } else {
+      opcionCerrarSesion.style.visibility = "hidden";
+    }
+  });
+
+  document.addEventListener("click", function (e) {
+    if (opcionCerrarSesion.style.visibility == "visible") {
+      opcionCerrarSesion.style.visibility = "hidden";
+    }
   });
 
   btnCerrarFiltros.addEventListener("click", function () {

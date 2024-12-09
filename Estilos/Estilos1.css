@@ -310,7 +310,7 @@ header span {
   align-content: center;
   text-align: center;
   margin: 5%;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 #grid1 {
@@ -502,7 +502,7 @@ header span {
   border-radius: 15px;
   padding: 10%;
   align-self: center;
-  height: 80%;
+  height: 85%;
 }
 
 .contenedor-img img {
@@ -613,7 +613,7 @@ header span {
   margin: 3%;
   margin-top: 5%;
   overflow-y: scroll;
-  height: calc(98vh - 100px);
+  height: calc(94vh - 100px);
 }
 
 #lista-reportesEncargado li {
