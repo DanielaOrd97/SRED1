@@ -960,6 +960,22 @@ textarea {
   font-weight: bold;
 }
 
+/* OPCION CERRAR SESION *******************************************************/
+#opcionCerrarSesion {
+  visibility: hidden;
+  background-color: #002664;
+  position: absolute;
+  top: 40px;
+  width: 30%;
+  text-align: center;
+  border-radius: 8px;
+  padding: 0.5%;
+  right: 5%;
+  font-size: 0.8em;
+  color: #ffffff;
+  box-shadow: 3px 7px 6px 1px rgba(0, 0, 0, 0.66);
+}
+
 /************************************** ESCRITORIO ************************************/
 
 @media (min-width: 1024px) {
@@ -1679,6 +1695,18 @@ textarea {
     text-decoration: underline;
     transition: all 0.1s ease;
   }
+
+  /* OPCION CERRAR SESION ******************************************************/
+
+  #opcionCerrarSesion {
+    width: 13%;
+    top: 80px;
+  }
+
+  #opcionCerrarSesion:hover {
+    font-weight: bold;
+    transition: all 0.1s ease;
+  }
 }
 
 @media (width>1600px) {
@@ -2026,6 +2054,12 @@ textarea {
 
   #body-logIn a {
     font-size: 1em;
+  }
+
+  /* OPCION CERRAR SESION ******************************************************/
+  #opcionCerrarSesion {
+    width: 17%;
+    top: 53px;
   }
 }
 

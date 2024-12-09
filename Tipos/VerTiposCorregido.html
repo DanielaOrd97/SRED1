@@ -17,6 +17,9 @@
         />
       </span>
     </header>
+    <div id="opcionCerrarSesion">
+      <label for="">Cerrar sesión</label>
+    </div>
     <main id="main-aulas">
       <ul id="lista-Aulas">
         <li class="swipe-item">
@@ -128,9 +131,26 @@
     menuMoviles.classList.toggle("abrir");
   });
 
+  let btnCerrarSesion = document.querySelector(".config-grande");
+  let opcionCerrarSesion = document.getElementById("opcionCerrarSesion");
+
+  btnCerrarSesion.addEventListener("click", function (e) {
+    e.stopPropagation();
+
+    if (opcionCerrarSesion.style.visibility === "hidden") {
+      opcionCerrarSesion.style.visibility = "visible";
+    } else {
+      opcionCerrarSesion.style.visibility = "hidden";
+    }
+  });
+
   document.addEventListener("click", function (e) {
     if (e.target.id != "btn-menu1") {
       menuMoviles.classList.remove("abrir");
+    }
+
+    if (opcionCerrarSesion.style.visibility == "visible") {
+      opcionCerrarSesion.style.visibility = "hidden";
     }
   });
 </script>
