@@ -281,6 +281,15 @@
     if (opcionCerrarSesion.style.visibility == "visible") {
       opcionCerrarSesion.style.visibility = "hidden";
     }
+
+    const lista = document.getElementById("lista-reportesEncargado");
+    const elementos = lista.getElementsByTagName("li");
+
+    for (let i = 0; i < elementos.length; i++) {
+      elementos[i].addEventListener("click", function () {
+        window.location.href = "../Encargado/VerDetallesReporte.html"; // Redirige a index.html
+      });
+    }
   });
 
   btnCerrarFiltros.addEventListener("click", function () {
