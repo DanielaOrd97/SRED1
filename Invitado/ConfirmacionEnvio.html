@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-      <a href="../Equipos/ActualizarEquipo(Tipo).html">
+      <a href="../Invitado/VerReportesEnviados.html">
         <img src="../assets/arrow-left-solid.svg" alt="" id="btn-regresar" />
       </a>
       <span>
@@ -19,6 +19,9 @@
         />
       </span>
     </header>
+    <div id="opcionCerrarSesion">
+      <label for="">Cerrar sesión</label>
+    </div>
     <main id="main-confirmacion">
       <label for=""> Su reporte ha sido enviado correctamente.</label>
       <img src="../assets/marcar.png" alt="" />
@@ -26,3 +29,23 @@
     </main>
   </body>
 </html>
+<script>
+  let btnCerrarSesion = document.querySelector(".config-grande");
+  let opcionCerrarSesion = document.getElementById("opcionCerrarSesion");
+
+  btnCerrarSesion.addEventListener("click", function (e) {
+    e.stopPropagation();
+
+    if (opcionCerrarSesion.style.visibility === "hidden") {
+      opcionCerrarSesion.style.visibility = "visible";
+    } else {
+      opcionCerrarSesion.style.visibility = "hidden";
+    }
+  });
+
+  document.addEventListener("click", function (e) {
+    if (opcionCerrarSesion.style.visibility == "visible") {
+      opcionCerrarSesion.style.visibility = "hidden";
+    }
+  });
+</script>
