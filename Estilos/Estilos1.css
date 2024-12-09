@@ -945,7 +945,7 @@ textarea {
   border-radius: 20px;
   box-shadow: -3px 1px 5px 0px rgba(0, 0, 0, 0.75);
 }
-
+/* 
 #body-logIn a {
   display: flex;
   margin-top: 15%;
@@ -958,6 +958,28 @@ textarea {
 #body-logIn a span {
   margin-left: 1%;
   text-decoration: underline;
+  font-weight: bold;
+} */
+
+.link-log {
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  height: 5%;
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+  font-size: 0.8em;
+  color: #1230ae;
+}
+
+.link-log a {
+  height: 100%;
+  margin-left: 1%;
+  font-size: 0.9em !important;
+  align-self: center;
+  margin-bottom: 2%;
+  color: #1230ae;
   font-weight: bold;
 }
 
@@ -1683,9 +1705,18 @@ textarea {
   #body-logIn a {
     margin-top: 2%;
     font-size: 0.8em;
+    margin-left: 0.5%;
+    font-weight: normal;
+    text-decoration: none;
   }
 
-  #body-logIn a span {
+  #body-logIn a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    transition: all 0.1s ease;
+  }
+
+  /* #body-logIn a span {
     font-weight: 400;
     text-decoration: none;
     margin-left: 0.5%;
@@ -1695,7 +1726,7 @@ textarea {
     font-weight: bold;
     text-decoration: underline;
     transition: all 0.1s ease;
-  }
+  } */
 
   /* OPCION CERRAR SESION ******************************************************/
 
@@ -1707,6 +1738,11 @@ textarea {
   #opcionCerrarSesion:hover {
     font-weight: bold;
     transition: all 0.1s ease;
+  }
+
+  /* VISTA LOG IN *********************************************************/
+  .link-log {
+    margin-top: 4%;
   }
 }
 
@@ -2062,6 +2098,15 @@ textarea {
     width: 17%;
     top: 53px;
   }
+
+  /* VISTA LOG IN ****************************************************/
+  .link-log {
+    font-size: 1em;
+  }
+
+  .link-log a {
+    margin-bottom: 0%;
+  }
 }
 
 /* DISP MAS CHICOS *************************************/
@@ -2102,5 +2147,18 @@ textarea {
   #main-confirmacion label {
     margin-top: 10%;
     font-size: 1.3em;
+  }
+
+  /* VISTA LOG IN **************************************************/
+  #body-logIn h3 {
+    font-size: 0.9em;
+  }
+
+  #body-logIn main {
+    margin-top: 2%;
+  }
+
+  .link-log {
+    margin-top: 5%;
   }
 }
