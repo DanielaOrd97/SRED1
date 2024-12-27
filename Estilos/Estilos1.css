@@ -172,6 +172,8 @@ header span {
   color: #ffffff;
   font-size: 0.8em;
   display: flex;
+  /* NUEVO */
+  height: 50px;
 }
 
 #lista-Aulas li label {
@@ -226,6 +228,11 @@ header span {
   align-self: flex-start !important;
 }
 
+/* NUEVO */
+.listaEquipos li {
+  height: 63px !important;
+}
+
 /* VISTA VER TIPOS ********************************************/
 
 .span-tipo {
@@ -237,10 +244,17 @@ header span {
 
 .span-tipo img {
   width: 35px;
+  /* NUEVO */
+  object-fit: contain;
 }
 
 .span-tipo label {
   margin-left: 5%;
+}
+
+/* NUEVO */
+.listaTipos li {
+  height: 60px;
 }
 
 /* * */
@@ -325,6 +339,18 @@ header span {
 #grid picture img {
   width: 45%;
   padding: 5%;
+  /* NUEVO */
+  object-fit: contain;
+  height: 90%;
+}
+
+#grid img {
+  background-color: pink;
+  width: 45%;
+  padding: 5%;
+  /* NUEVO */
+  object-fit: contain;
+  height: 90%;
 }
 
 #grid1 picture img {
@@ -341,6 +367,8 @@ header span {
   text-align: center;
   font-weight: 500;
   display: flex;
+  /* NUEVO */
+  height: 103px;
   flex-direction: column;
 }
 
@@ -545,7 +573,8 @@ header span {
   border: 1px solid #ffffff;
   margin: 1%;
   width: 92%;
-  min-width: 92%;
+  /* min-width: 92%; */
+  max-width: 92%;
   padding-bottom: 5%;
   position: absolute;
   left: 3%;
@@ -621,6 +650,10 @@ header span {
   display: flex;
   flex-direction: column;
   padding: 4%;
+  /* NUEVO */
+  height: 140px;
+  /* NUEVO */
+  /* max-height: 200px; */
   margin-bottom: 3%;
   border-radius: 20px;
   box-shadow: 3px 5px 2px 0px rgba(0, 0, 0, 0.3);
@@ -842,6 +875,8 @@ textarea {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow-y: scroll;
+  scrollbar-width: none !important;
 }
 
 #body-logIn header {
@@ -978,7 +1013,7 @@ textarea {
   margin-left: 1%;
   font-size: 0.9em !important;
   align-self: center;
-  margin-bottom: 1%;
+  /* margin-bottom: 1%; */
   color: #1230ae;
   font-weight: bold;
 }
@@ -997,6 +1032,15 @@ textarea {
   font-size: 0.8em;
   color: #ffffff;
   box-shadow: 3px 7px 6px 1px rgba(0, 0, 0, 0.66);
+}
+
+/* LBL DESCRIPCION ENCARGADO */
+.descrip {
+  display: inline-block;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /************************************** ESCRITORIO ************************************/
@@ -1284,6 +1328,11 @@ textarea {
     overflow-y: hidden;
   }
 
+  /* NUEVO */
+  #grid span {
+    height: 138px;
+  }
+
   /* VISTA AGREGAR EQUIPO LAB ***********************/
   #btn-accion {
     font-size: 1em;
@@ -1438,6 +1487,8 @@ textarea {
 
   #lista-reportesEncargado li {
     width: 90%;
+    /* NUEVO */
+    height: 165px;
     justify-self: center;
     padding: 5%;
     box-shadow: -5px 1px 12px -1px rgba(0, 0, 0, 0.75);
@@ -1745,6 +1796,10 @@ textarea {
     margin-top: 4%;
   }
 
+  .link-log a {
+    margin-bottom: 2%;
+  }
+
   /* EXCEPCION EN VISTAS ELIMINAR *****************************************/
   #excepcion1 {
     color: red;
@@ -1875,8 +1930,15 @@ textarea {
     width: 22px;
   }
 
+  /* NUEVO */
+  #grid span {
+    height: 125px;
+  }
+
   #lista-Aulas li {
     font-size: 1.1em;
+    /* NUEVO */
+    height: 65px;
   }
 
   .opciones-elemento {
@@ -1905,6 +1967,11 @@ textarea {
   }
   .opciones-elemento {
     align-self: center;
+  }
+
+  /* NUEVO */
+  .listaTipos li {
+    height: 75px;
   }
 
   /* MENU LATERAL MOVILES TABLET ***************/
@@ -1955,6 +2022,13 @@ textarea {
   }
 
   /* VISTA ENCARGADO *********************************************/
+  #filtros-flotante {
+    width: 70%;
+    position: absolute;
+    margin-top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
   #filtros-flotante label {
     font-size: 1.2em;
@@ -1975,6 +2049,11 @@ textarea {
     padding: 1%;
     font-size: 1em;
     border-radius: 30px;
+  }
+
+  /* NUEVO */
+  #lista-reportesEncargado li {
+    height: 200px;
   }
 
   #lista-reportesEncargado li img {
@@ -2112,6 +2191,25 @@ textarea {
 
   .link-log a {
     margin-bottom: 0%;
+  }
+
+  /* NUEVO */
+  .listaEquipos li {
+    height: 100px !important;
+  }
+}
+
+@media ((width > 550px) and (width < 765px)) {
+  #filtros-flotante {
+    width: 50%;
+    position: absolute;
+    left: 23%;
+  }
+}
+
+@media (width > 1010px) {
+  #filtros-flotante {
+    display: none !important;
   }
 }
 
